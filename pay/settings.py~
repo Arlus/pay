@@ -78,7 +78,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'xt#d^jyx#e6+))(4k8kh28=^-)#k=_r7d#eit(u5)*#9tlh1!x'
+SECRET_KEY = 'h%nk(60_#p7=)@gw&amp;50b!qj&amp;1%4k893)z!&amp;dki$zp2nneb@ylw'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -106,7 +106,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    '/home/arlus/Videos/pay/pay/pay/templates',
+    "/home/arlus/Videos/pay/pay/templates",
 )
 
 INSTALLED_APPS = (
@@ -151,11 +151,6 @@ LOGGING = {
     }
 }
 
-
-#paypal settings
 USERNAME = "arlusishmael_api1.ymail.com"
 PASSWORD = "1378158935"
 SIGNATURE = "Al4U.YSVxBesXAKATYmzOhAsLzOwA9k6kc4p1fO8kXiWXKJkiAjZaatv"
-
-
-

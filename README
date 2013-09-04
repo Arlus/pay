@@ -1,0 +1,5 @@
+This is example code on how to request Paypal third party permissions and then fetch transaction history. Using the Paypal API directly is a pain...this code may save someone hours of googling and dealing with auhtentication errors while using the Paypal third party permissions API. 
+
+The code is still in a work in progres state and some of the authentication values are hardcoded into the app while they should be fetched dynamically. 
+
+However, the code will be complete soon and I will update it for re-use or refactoring by those interested.

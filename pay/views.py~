@@ -38,8 +38,8 @@ def home(request):
     #red_url = "https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_grant-permission&request_token=%s" % token
     #if red_url:
     #    return HttpResponseRedirect(red_url)
-    token = "AAAAAAAYaraTSVjvkUBT"
-    verification = "DIXWn8uRbKKfz4iXdvx97A"
+    token = "AAAAAAAYa29CfnJMMkog"
+    verification = "cQ.qMXForwDfPSJ4yGdRfw"
     headers2 = {
     "X-PAYPAL-SECURITY-USERID": settings.USERNAME,
     "X-PAYPAL-SECURITY-PASSWORD": settings.PASSWORD,
@@ -53,15 +53,15 @@ def home(request):
     print url
     dat2 = {
         "requestEnvelope": {"errorLanguage":"en_US"}, 
-        "token": "AAAAAAAYa2PXOvLVNgHC", 
-        "verifier": "RUVr3ilNAPph85c4fsYTYg"}
+        "token": "AAAAAAAYa3HTGlQfoq96", 
+        "verifier": "7CBUuUi-1c1y1ySufrc86w"}
     req2 = urllib2.Request("https://svcs.sandbox.paypal.com/Permissions/GetAccessToken/", simplejson.dumps(dat2), headers2)
     res2 = ast.literal_eval(urllib2.urlopen(req2).read())
     
 
     (timestamp, signature) = signaturegen.getAuthHeader(apiUser=settings.USERNAME, apiPass=settings.PASSWORD, accessTok=res2["token"], secTok=res2["tokenSecret"], httpMethod="POST", scriptURI="https://api-3t.sandbox.paypal.com/nvp")    
     
-    ultimate = {"X-PP-AUTHORIZATION": "timestamp="+timestamp+",token="+res2["token"]+",signature="+signature, "SUBJECT": settings.username}
+    ultimate = {"X-PAYPAL-AUTHORIZATION": "timestamp="+timestamp+",token="+res2["token"]+",signature="+signature, "SUBJECT": settings.USERNAME}
 
     da = {
         "METHOD": "TransactionSearch",
